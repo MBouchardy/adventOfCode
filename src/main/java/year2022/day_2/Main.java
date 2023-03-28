@@ -1,7 +1,7 @@
-package org.example;
+package year2022.day_2;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        System.out.println("yoooh les boys");
     }
 }
