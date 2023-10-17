@@ -27,7 +27,10 @@ public class MemoryBank {
         //Share ValueToShare between blocks
         for (int i = 1; i <= maxValueBlock; i++) {
             //Move index starting from the following of maxValueIndex and loop at max
-            int modifiedBlockIndex = (maxValueIndex + i) % memoryBlocks.size();
+            int modifiedBlockIndex = (maxValueIndex + i);
+            if (modifiedBlockIndex > memoryBlocks.size()) {
+                modifiedBlockIndex = 0;
+            }
             //add 1 to the block
             memoryBlocks.set(modifiedBlockIndex, (memoryBlocks.get(modifiedBlockIndex) + 1));
         }
